@@ -1,0 +1,23 @@
+%button {
+    display: inline-block;
+    text-align: center;
+    padding:10px 20px;
+    border:2px solid black;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+.button-primary {
+    @extend %button;
+    background-color:black;
+    color:white;  
+}
+
+.button-secondary {
+    @extend %button;
+    color:black; 
+}
+
+// .button-group > a{
+//     margin:2px 0;
+// }

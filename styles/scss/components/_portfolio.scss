@@ -1,0 +1,91 @@
+.portfolio {
+    margin-top:25px;
+    .portfolio-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .portfolio-item {
+            position: relative;
+            margin:15px 0;
+            padding:20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            width:33%;
+            height: 400px;
+            .image {
+                background-position: center top;
+                background-size:cover;
+                height:50%;
+            }
+            .portfolio__content {
+                
+                height:50%;
+                padding:20px;
+                display: flex;
+                flex-direction: column;
+             
+            
+                .portfolio-heading {
+                    font-size: 20px;
+                    padding:20px 0;
+                }
+                .portfolio__paragraph {
+                    font-size: 16px;
+                    padding-bottom:10px;
+                }
+            }
+        }
+    }
+
+    @include media($small) {
+        padding:0 20px;
+        .portfolio-container {
+            .portfolio-item  {
+                width:100%;
+                .image {
+                    width:100%;
+                }
+            }
+        }
+    }
+
+    @include media($middle){
+        .portfolio-container {
+            margin:0 auto;
+            max-width:90%;
+            width:75%;
+        }
+    }
+    .button-group {
+        position: absolute;
+        bottom:5%;
+    }
+}
+
+#portfolio-item-1 {
+    background-image: url("./images/crowchild.png");
+}
+
+#portfolio-item-2 {
+    background-image: url("./images/kilimanjaro.png");
+}
+
+#portfolio-item-3 {
+    background-image: url("./images/mhu.png");
+}
+
+#portfolio-item-4 {
+    background-image: url("./images/bluegrass.png");
+}
+
+#portfolio-item-5 {
+    background-image: url("./images/ad-website.png");
+}
+
+#portfolio-item-6 {
+    background-image: url("./images/creb-website.png");
+}
+
+
+#portfolio-item-7 {
+    background-image: url("./images/bootstrap-website.png");
+}

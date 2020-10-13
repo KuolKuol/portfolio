@@ -1,0 +1,40 @@
+.banner {
+    margin-top:100px;
+    background-color: black;
+    color:white;
+    height:250px;
+    .center {
+        height:100%;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .banner__heading {
+            font-weight: normal;
+            font-size: 40px;
+            text-transform: lowercase;
+            padding-bottom:20px;
+        }
+        .banner__sub-heading {
+            font-weight: normal;
+            font-size: 20px;
+        }
+    }
+
+    @include media($small) {
+        .center {
+            margin:initial;
+            max-width:initial;
+            width:initial;
+            padding:0 25px ;
+        }   
+          
+    }
+    @include media($middle) {
+        .center {
+            margin:0 auto;
+            max-width:90%;
+            width:75%;
+        }
+    }
+}

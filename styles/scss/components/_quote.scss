@@ -1,0 +1,48 @@
+.quote-box {
+    background-color: rgb(247,247,247);
+    min-height: 200px;
+    padding:50px 0;
+
+    .quote-container {
+       
+
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        line-height: 1.6;
+       
+        .quote {
+            font-size: 20px;
+            
+        }
+        .source {
+            text-align:right;
+            font-size: 20px;
+            padding-top:20px;
+            font-style: italic;
+
+        }
+    }
+
+    @include media($small){
+        .quote-container {
+            padding:0 20px;
+        }
+    }
+
+    @include media($middle){
+        .quote-container {
+            margin: 0 auto;
+            max-width: 90%;
+            width: 75%;
+            .quote {
+            
+            }
+            .source {
+            
+            }
+        }
+    }
+}

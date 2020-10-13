@@ -1,0 +1,11 @@
+// GENERATE FONTFACE CSS TEMPLATE
+@mixin font($name, $url, $weight, $style) {
+	@font-face {
+		font-family: '#{$name}';
+        src: url('#{$url}');
+        font-weight: $weight;
+        font-style: $style;
+        // users see a fallback font if custom font takes longer than 100ms to load
+        // font-display: optional;
+    }
+}

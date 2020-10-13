@@ -1,0 +1,16 @@
+.policy {
+    line-height: 50px;
+    padding-top:25px;
+    h1 {
+        font-size: 30px;
+    }
+
+    @include media($small){
+        padding:40px;
+    }
+    @include media($middle){
+        margin:0 auto;
+        max-width:90%;
+        width:75%;
+    }
+}

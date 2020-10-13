@@ -1,0 +1,26 @@
+/* VIDEO BACKGROUND */
+.video-background {
+    position: absolute;
+    z-index: -99;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background video {
+    z-index: -99;
+    min-width:100%;
+    min-height: 100%;
+}
+.video-overlay {
+    z-index: -99;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:-1;
+    background-color: rgba(74,177,241, 0.833);
+}

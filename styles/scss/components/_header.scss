@@ -1,0 +1,97 @@
+.header {
+    background-color:rgba(255,255,255,.97);
+    z-index: 99;
+    border-bottom:1px solid #eee;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    .header__container{
+        .nav__link,.logo {
+            text-decoration: none;
+            color:black;
+        }
+        .logo{
+            font-size: 1.5em;
+            font-family: "Playfair Display";
+        }
+        .nav__link {
+            font-size:1.1em;
+            font-family: "Playfair Display";
+        }
+        @include media($small){
+            // margin:0 auto;
+            // max-width:90%;
+            // width:75%;
+            z-index:99;
+
+            width:100%;
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            .header__heading {
+                background-color:rgba(255,255,255,.97);
+                z-index:-1;
+                min-height: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                align-items: center;
+                .logo {
+                    position: absolute;
+                    left: 50%;
+                    margin-left:-25px;
+                    right: 0;
+                }
+               .bars{
+                   cursor: pointer;
+                   margin-left:25px;
+               }
+            }
+            .nav {
+                display: none;
+                    .nav__list{ 
+                    width: 100%;
+                    height:100%;
+                    align-items: center;
+                    .nav__item {
+                        .nav__link {
+                            border:1px solid #eee;
+                            padding:25px;
+                            display: block;
+                
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include media($middle){
+            margin:0 auto;
+            max-width:90%;
+            width:75%;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .header__heading {
+                display:flex;
+                .bars {
+                    display: none;
+                }
+            }
+            .nav{
+                .nav__list {
+                    display: flex;
+                    flex-direction: row;
+                    & *+*{
+                        margin-left:1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
